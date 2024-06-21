@@ -1,0 +1,54 @@
+.chat {
+  padding: 20px;
+}
+
+.error {
+  margin-bottom: 50px;
+  text-align: center;
+  font: 500 22px "Roboto Condensed", sans-serif;
+}
+
+.question,
+.answer {
+  width: 280px;
+  height: auto;
+  padding: 20px;
+  margin-left: auto;
+  margin-bottom: 20px;
+  background-color: #c5fd97;
+  border: 1px solid #84cf47;
+  border-radius: 10px;
+  overflow: hidden;
+}
+
+.answer {
+  margin-left: 0;
+  background-color: #a8dcff;
+  border: 1px solid #6fa3c5;
+}
+
+.form {
+  position: relative;
+}
+
+.input {
+  width: 90%;
+  padding: 10px 50px 10px 20px;
+  border: 1px solid #b9b9b9;
+  outline: none;
+  border-radius: 10px;
+}
+
+.btn {
+  position: absolute;
+  top: 5px;
+  right: 50px;
+  background-color: transparent;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+.img {
+  width: 25px;
+}
