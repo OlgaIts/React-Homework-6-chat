@@ -16,14 +16,14 @@ const createUser = () => {
   return newId;
 };
 
-export const Chat = ({}) => {
+export const Chat = () => {
   const [form, setForm] = useState({content: ""});
   const [list, setList] = useState<Message[]>([]);
   const [error, setError] = useState("");
   const currentUserId = localStorage.getItem("userId") || createUser();
 
   useEffect(() => {
-    setInterval(async () => {
+    const interval = setInterval(async () => {
       const id = (list.length > 0 && list.pop()?.id) || 0; // айди последнего элемента, либо 0
       const response = await getMessages(id);
       if (response.status === "error") {
@@ -33,7 +33,8 @@ export const Chat = ({}) => {
       if (response.data) {
         setList(response.data);
       }
-    }, 2000);
+    }, 2 * 1000);
+    return () => clearInterval(interval);
   }, []);
 
   const handleFormValueChange = ({

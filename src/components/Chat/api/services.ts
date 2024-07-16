@@ -14,12 +14,12 @@ export const getMessages = async (id: number) => {
     }
     return {
       status: "error",
-      errorMessage: "" // обработка 400, 500 
+      errorMessage: "", // обработка 400, 500
     };
   } catch (error) {
     return {
       status: "error", // когда сервер в отключке
-    }
+    };
   }
 };
 
